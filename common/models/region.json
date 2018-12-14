@@ -1,0 +1,60 @@
+{
+  "name": "Region",
+  "plural": "regions",
+  "options": {
+    "idInjection": false,
+    "mysql": {
+      "schema": "test1",
+      "table": "region"
+    }
+  },
+  "properties": {
+    "Rid": {
+      "type": "number",
+      "required": true,
+      "id": true,
+      "mysql": {
+        "columnName": "Rid",
+        "dataType": "number",
+        "dataLength": 11,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      }
+    },
+    "RegionName": {
+      "type": "string",
+      "required": true,
+      "mysql": {
+        "columnName": "Rname",
+        "dataType": "string",
+        "dataLength": 45,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      }
+    },
+    "Cid": {
+      "type": "number",
+      "required": true,
+      "mysql": {
+        "columnName": "Cid",
+        "dataType": "number",
+        "dataLength": 11,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {
+    "city": {
+      "type": "belongsTo",
+      "model": "City",
+      "foreignKey": "Cid"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

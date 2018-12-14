@@ -1,0 +1,43 @@
+{
+  "name": "City",
+  "plural": "cities",
+  "options": {
+    "idInjection": false,
+    "mysql": {
+      "schema": "test1",
+      "table": "City"
+    }
+  },
+  "properties": {
+    "Cid": {
+      "type": "number",
+      "required": true,
+      "id": true,
+      "mysql": {
+        "columnName": "Cid",
+        "dataType": "number",
+        "dataLength": 11,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      }
+    },
+    "Cname": {
+      "type": "string",
+      "required": true,
+      "mysql": {
+        "columnName": "Cname",
+        "dataType": "string",
+        "dataLength": 45,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {
+  },
+  "acls": [],
+  "methods": {}
+}
